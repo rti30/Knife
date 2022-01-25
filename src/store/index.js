@@ -1,12 +1,11 @@
 import { createStore } from 'vuex'
 
+import anyParams from '@/store/anyParams';
+
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
-  }
-})
+    anyParams,
+  },
+  strict: process.env.NODE_ENV !== 'production',
+});
+

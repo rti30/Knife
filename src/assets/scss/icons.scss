@@ -1,0 +1,63 @@
+@font-face {
+	font-family: "icons";
+	font-display: swap;
+	src: url("../fonts/icons.ttf?2ipmvh") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-font-"],
+[class*=" icon-font-"] {
+	&:before {
+		@extend %ic;
+		display: inline-block;
+	}
+}
+
+.icon-font-back:before {
+	content: "\e90b";
+}
+.icon-font-clock:before {
+	content: "\e902";
+}
+.icon-font-messege:before {
+	content: "\e903";
+}
+.icon-font-search:before {
+	content: "\e908";
+}
+.icon-font-cart:before {
+	content: "\e900";
+}
+.icon-font-arrow:before {
+	content: "\e901";
+}
+.icon-font-compare:before {
+	content: "\e904";
+}
+.icon-font-like:before {
+	content: "\e905";
+}
+.icon-font-location:before {
+	content: "\e906";
+}
+.icon-font-logo:before {
+	content: "\e907";
+}
+.icon-font-phone:before {
+	content: "\e909";
+}
+.icon-font-user:before {
+	content: "\e90a";
+}

@@ -1,0 +1,34 @@
+@use "sass:math";
+//Подключение шрифта
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff2") format("woff2");
+		//, url("../fonts/#{$file_name}.woff2") format("woff2");
+		//	src: url("@/assets/fonts/#{$file_name}.woff") format("woff");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+///* Новая формула адаптации ///font-size: calcSize(16, 48, 480, 1280);
+
+@function calcSize($x-min, $x-max, $w-min, $w-max) {
+	$k1: ($x-max - $x-min);
+	$k2: ($w-max - $w-min);
+	$k: math.div($k1, $k2);
+	$b: $x-min - $k * $w-min;
+	$b: $b * 1px;
+	@return calc(#{$k} * 100vw + #{$b});
+}
+
+//! /////////////////////////////////////////////////
+@function calcSizeH($x-min, $x-max, $w-min, $w-max) {
+	$k1: ($x-max - $x-min);
+	$k2: ($w-max - $w-min);
+	$k: math.div($k1, $k2);
+	$b: $x-min - $k * $w-min;
+	$b: $b * 1px;
+	@return calc(#{$k} * 100vh + #{$b});
+}

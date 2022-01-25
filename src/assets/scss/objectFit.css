@@ -1,0 +1,19 @@
+.img-object-fit img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.img-object-fit--polyfill {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-object-fit--polyfill img {
+  opacity: 0;
+}
+/*# sourceMappingURL=objectFit.css.map */
